@@ -1,0 +1,27 @@
+<div class="wrapper-collection">
+<div class="title">
+  <div class="name">
+    <%= @collectioner.first_name %> <%= @collectioner.last_name %>
+  </div>
+
+    <%= @collection.name %>
+</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <% @products.each do |product| %>
+          <ul>
+            <%= product.name %>
+          </ul>
+        <% end %>
+      </div>
+      <div class="col-xs-6">
+        <%= @collection.description %>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+

@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  validates :name, presence: true, uniqueness: true
+  validates :lv1_name, presence: true
 
   # many-to-many relationships with joint table products_categories
   has_many :product_categories, class_name: 'ProductCategory'

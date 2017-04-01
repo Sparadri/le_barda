@@ -7,8 +7,10 @@ class Collection < ApplicationRecord
   belongs_to :collectioner
   has_many :products, dependent: :destroy
   has_many :interviews, dependent: :destroy
+  has_many :picture_interviews, dependent: :destroy
+  has_many :picture_shootings, dependent: :destroy
 
-  validates :title, presence: :true, uniqueness: true
+  validates :name, presence: :true, uniqueness: true
   validates :collectioner, presence: :true
 
 

@@ -18,7 +18,7 @@ class Product < ApplicationRecord
 
   # data validation
   # to do: add uniqueness on scope?
-  validates :title, presence: true
+  validates :name, presence: true
   validates :collection_id, presence: true
   # validates :category_id, presence: true   > does not exist anymore
 

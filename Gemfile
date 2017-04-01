@@ -4,11 +4,19 @@ ruby '2.3.1'
 gem 'rails', '5.0.2'
 gem 'puma'
 gem 'pg'
-gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
 
+# back features
+gem 'pundit'
+gem 'figaro'
+
+# pictures
+gem 'cloudinary', '1.1.0'
+gem 'carrierwave', '~> 0.11.2'
+
+# front features
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
@@ -22,14 +30,10 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'gibbon'
 gem 'acts_as_votable', '~> 0.10.0'
 
-# sidekiq
-gem 'sidekiq'
-gem 'sidekiq-failures'
-gem 'sinatra' # dependency sidekiq
-
-# image storage
-gem 'cloudinary', '1.1.0'
-
+# sidekiq // not working check lewagon documentation
+# gem 'sidekiq'
+# gem 'sidekiq-failures'
+# gem 'sinatra' # dependency sidekiq
 
 group :development, :test do
 
