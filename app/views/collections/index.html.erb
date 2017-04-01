@@ -1,5 +1,7 @@
-<% @collections.each do |collection| %>
-  <ul>
-    <%= collection.name %>
-  </ul>
-<% end %>
+<div class="wrapper-collections">
+  <% @collections.each do |collection| %>
+    <ul>
+      <%= link_to collection.name, collection_path(collection) %>
+    </ul>
+  <% end %>
+</div>

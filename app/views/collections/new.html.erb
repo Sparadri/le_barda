@@ -1,0 +1,16 @@
+<!-- https://github.com/plataformatec/simple_form/wiki/Nested-Models -->
+
+<div class="form">
+  <%= simple_form_for @collection do |c| %>
+    <%= c.input :collectioner,
+      :collection => @collectioners,
+      :label_method => :first_name,
+      :value_method => :id,
+      :label => "Collectioner" ,
+      :include_blank => false %>
+    <%= c.input :name %>
+    <%= c.input :description %>
+
+    <%= c.submit "create collection", class: "btn btn-primary"%>
+  <% end %>
+</div>

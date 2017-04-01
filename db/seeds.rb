@@ -80,11 +80,6 @@ end
 end
 
 
-# PICTURE
-pic = "#{Rails.root}/app/assets/images/#{row['picture']}.jpg"
-cloud_pic = Cloudinary::Uploader.upload(File.open(pic))
-picture_url = cloud_pic["secure_url"]
-
 p user.find_liked_items
 
 # INTERVIEW

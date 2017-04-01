@@ -1,0 +1,11 @@
+<div class="form">
+  <%= simple_form_for @product do |f| %>
+
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :picture %>
+    <%= f.input :shop_url %>
+    <%= f.submit "create product", class: "btn btn-primary"%>
+  <% end %>
+</div>

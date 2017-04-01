@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
 
   acts_as_votable
+  mount_uploader :picture, PictureUploader
   include Filterable
 
   after_initialize :default_values
@@ -19,7 +20,6 @@ class Product < ApplicationRecord
   # data validation
   # to do: add uniqueness on scope?
   validates :name, presence: true
-  validates :collection_id, presence: true
   # validates :category_id, presence: true   > does not exist anymore
 
 

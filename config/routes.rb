@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get 'home',   to: 'pages#home'
-  get 'collections', to: 'collections#index'
-  get 'collection/:id', to: 'collections#show'
-  get 'products', to: 'products#index'
+
+  resources :products, only: [:index, :show, :new, :create, :update, :destroy]
+  resources :collections, only: [:index]
+
+  resources :collections do
+    resources :products, only: [ :show, :create ]
+  end
 
 end

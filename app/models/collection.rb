@@ -13,6 +13,8 @@ class Collection < ApplicationRecord
   validates :name, presence: :true, uniqueness: true
   validates :collectioner, presence: :true
 
+  # for nested forms
+  accepts_nested_attributes_for :products
 
   # SCOPES / FILTERING / ORDERING
 
