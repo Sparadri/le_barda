@@ -17,10 +17,27 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
+# features
+gem 'will_paginate', '~> 3.1.0'
+gem 'gibbon'
+gem 'acts_as_votable', '~> 0.10.0'
+
+# sidekiq
+gem 'sidekiq'
+gem 'sidekiq-failures'
+gem 'sinatra' # dependency sidekiq
+
+# image storage
+gem 'cloudinary', '1.1.0'
+
+
 group :development, :test do
+
+  gem 'faker'
+
   gem 'binding_of_caller'
   gem 'better_errors'
-  
+
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
