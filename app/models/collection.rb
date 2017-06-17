@@ -15,6 +15,7 @@ class Collection < ApplicationRecord
 
   # for nested forms
   accepts_nested_attributes_for :products
+  accepts_nested_attributes_for :interviews
 
   # SCOPES / FILTERING / ORDERING
 

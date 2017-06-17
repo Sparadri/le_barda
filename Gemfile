@@ -30,6 +30,10 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'gibbon'
 gem 'acts_as_votable', '~> 0.10.0'
 
+# active admin
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 # sidekiq // not working check lewagon documentation
 # gem 'sidekiq'
 # gem 'sidekiq-failures'

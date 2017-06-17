@@ -12,9 +12,9 @@ Category.destroy_all
 
 # USER
 password = '12345678'
-p user     = User.create(email: 'me@me.com', password: password)
-p User.create(email: 'yo@me.com', password: password)
-p User.create(email: 'to@me.com', password: password)
+p user     = User.create(email: 'me@me.com', password: password, admin: true)
+p User.create(email: 'yo@me.com', password: password, admin: true)
+p User.create(email: 'to@me.com', password: password, admin: true)
 
 # CATEGORIES
 ['fashion', 'clothing', 'shoes', 'art', 'decoration'].each do |category|

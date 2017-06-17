@@ -19,6 +19,7 @@ class CollectionsController < ApplicationController
 
 
   def create
+    raise
     cp = collection_params
     cp[:collectioner] = Collectioner.find(cp[:collectioner].to_i)
     @collection = Collection.create(cp)
@@ -29,6 +30,7 @@ class CollectionsController < ApplicationController
   end
 
   def edit
+    raise
     @collection = Collection.find(params[:id])
   end
 

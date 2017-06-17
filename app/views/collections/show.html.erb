@@ -13,15 +13,24 @@
         <% @products.each do |product| %>
           <ul>
             <%= product.name %>
+            <%= image_tag(product.picture, :width => 250, crop: :fill) %>
           </ul>
         <% end %>
       </div>
       <div class="col-xs-6">
         <%= @collection.description %>
+        <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 600 }'>
+          <% @products.each_with_index do |product, index| %>
+            <div class="grid-item">
+              <%= image_tag(product.picture, :width => 250, crop: :fill) %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
 
 
-</div>
+
+
 
